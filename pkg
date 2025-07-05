@@ -36,16 +36,16 @@ case "$1" in
         print_help
         ;;
     install)
-        shift; xbps-install -S "$@"
+        shift; sudo xbps-install -S "$@"
         ;;
     remove)
-        shift; xbps-remove "$@"
+        shift; sudo xbps-remove "$@"
         ;;
     search)
         shift; xbps-query -Rs "$@"
         ;;
     upgrade)
-        shift; xbps-install -Su "$@"
+        shift; sudo xbps-install -Su "$@"
         ;;
     info)
         shift; xbps-query "$@"
@@ -57,13 +57,13 @@ case "$1" in
         shift; xbps-query -f "$@"
         ;;
     clean)
-        shift; xbps-remove -O "$@"
+        shift; sudo xbps-remove -O "$@"
         ;;
     hold)
-        shift; xbps-pkgdb -m hold "$@"
+        shift; sudo xbps-pkgdb -m hold "$@"
         ;;
     unhold)
-        shift; xbps-pkgdb -m unhold "$@"
+        shift; sudo xbps-pkgdb -m unhold "$@"
         ;;
     deps|dependencies|depends-on)
         shift; xbps-query -Rx "$@"
@@ -75,7 +75,7 @@ case "$1" in
         shift; xbps-query -O "$@"
         ;;
     db)
-        shift; xbps-pkgdb "$@"
+        shift; sudo xbps-pkgdb "$@"
         ;;
     alternatives)
         shift; xbps-alternatives "$@"
@@ -84,7 +84,7 @@ case "$1" in
         shift; xbps-query "$@"
         ;;
     reconfigure)
-        shift; xbps-reconfigure "$@"
+        shift; sudo xbps-reconfigure "$@"
         ;;
     rindex)
         shift; xbps-rindex "$@"
