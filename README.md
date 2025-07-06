@@ -37,14 +37,12 @@ Hold *somepackage* at current version
 ```shell
 pkg hold somepackage
 ```
+
+Spend 40 minutes calculating all the packages to ignorepkg in order to completely ban a pack that brought you pain in another like
+```shell
+pkg ban python3
+```
+
 See `pkg help` for more.
-
-## Alternatives
-- [xb](https://github.com/ernierasta/xb): simple wrapper with apk-like 
-    interface.
-- [vpm](https://github.com/netzverweigerer/vpm): another advanced, powerful 
-    wrapper with colors!
-- [octoxbps](https://github.com/aarnt/octoxbps): Qt5 GUI for XBPS.
-
 
 
