@@ -1,5 +1,5 @@
 #!/bin/sh
-
+script_dir=$(dirname "$0")
 print_help() {
     echo "Usage: pkg ACTION|WRAPPER [PKGNAME|FILE]\n"
     echo "ACTIONS:"
@@ -89,6 +89,9 @@ case "$1" in
     rindex)
         shift; xbps-rindex "$@"
         ;;
+    ban)
+        shift; $script_dir/voidsins/voidban.sh "$@"
+	;;
     *)
         echo "Unknown option: $*"
         print_help
