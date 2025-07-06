@@ -24,6 +24,9 @@ print_help() {
     echo " query          calls xbps-query."
     echo " reconfigure    calls xbps-reconfigure."
     echo " rindex         calls xbps-rindex."
+    echo " "
+    echo "HACKS:"
+    echo " ban            takes a really long time to calculate dependents then adds them to ignorepkg. does not update automatically."    
 }
 
 if [ $# -lt 1 ]; then
